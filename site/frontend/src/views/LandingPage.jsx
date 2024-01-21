@@ -1,10 +1,18 @@
 import React from 'react';
+import Carousel from '../components/Carousel/Carousel';
+import HeaderLp from '../components/Header/HeaderLp';
+import CopyFooter from '../components/Footer/CopyFooter';
+import AboutUs from '../components/About/AboutUs';
+import Services from '../components/Service/Service';
 
 const LandingPage = () => {
   return (
     <>
-      <h1 className='text-red-600'>Welcome to the Landing Page!</h1>
-      <p>This is a default component.</p>
+      <HeaderLp />
+      <Carousel />
+      <Services />
+      <AboutUs />
+      <CopyFooter />
     </>
   );
 };
