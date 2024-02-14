@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import UserServices from "../../services/UserServices";
 import StatusNotification from "../Notification/StatusNotification";
+import ParticipationTable from "../Table/ParticipationTable";
+import DoughnutChart from "../Graph/DoughnutChart";
 
 const Participation = () => {
   const [statusNotification, setStatusNotification] = useState('');
@@ -72,8 +74,15 @@ const Participation = () => {
         {statusNotification === 'error' && <StatusNotification title="Error" message="An error occurred while creating the user" type="error" />}
         {statusNotification === 'warning' && <StatusNotification title="Warning" message="Please fill in all fields" type="warning" />}
       </div>
-      <div>
-
+      <div className="flex flex-col select-none pb-12">
+        <div className="text-center py-12">
+          <h1 className="text-4xl font-semibold">Data</h1>
+          <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia saepe maiores earum atque inventore quos ipsum.</p>
+        </div>
+        <div className="w-full flex px-[10%] justify-between">
+          <ParticipationTable className="w-1/2" />
+          <DoughnutChart className="w-1/2" />
+        </div>
       </div>
     </>
   )
